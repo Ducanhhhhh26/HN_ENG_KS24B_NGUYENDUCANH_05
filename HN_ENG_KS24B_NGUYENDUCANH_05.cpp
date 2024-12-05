@@ -45,9 +45,25 @@ int main(){
 					printf("arr[%d]=%d\n",i,arr[i]); 
 			} 
 				break; 
-			case 3: 
+			case 3:  {
+				int sum = 0;
+				int count=0;
+                	for (int j = 0; j < n; j++){
+                    		sum = 0;
+                   		 for (int i = 1; i <= arr[j] / 2; i++) {
+                       			 if (arr[j] % i == 0) {
+                           			 sum += i;
+                        }
+                    }
+                    if (sum == arr[j] && arr[j] != 0) {
+                        count++;
+                    }
+                } 
+				printf("Co %d so hoan hao o trong mang", count);
+				break;
+			}
 			
-				break; 
+				
 			case 4:
 			
 				break;
